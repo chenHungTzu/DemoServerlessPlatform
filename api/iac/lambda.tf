@@ -7,7 +7,7 @@ resource "aws_lambda_function" "lambda" {
   memory_size   = 512
   image_uri     = "${aws_ecr_repository.ecr[each.key].repository_url}:latest"
   function_name = "${var.lambda_name}-${each.key}"
-  handler       = "DemoServerlessPlatform::DemoServerlessPlatform.LambdaEntryPoint::FunctionHandlerAsync"
+  architectures = ["arm64"]
   environment {
     variables = {
       MODE = "${each.key}"

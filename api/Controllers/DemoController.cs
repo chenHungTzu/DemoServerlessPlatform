@@ -27,7 +27,7 @@ namespace DemoServerlessPlatform.Controllers
         /// </summary>
         /// <param name="number"></param>
         /// <returns></returns> 
-        [HttpGet("DivisionToWrite/{number}")]
+        [HttpPost("DivisionToWrite/{number}")]
         public async Task<IActionResult> DivisionToWrite(int number)
         {
             try

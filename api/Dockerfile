@@ -14,7 +14,7 @@ WORKDIR "/src/api"
 RUN dotnet build "DemoServerlessPlatform.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "DemoServerlessPlatform.csproj" -c Release -o /app/publish -p PublishReadyToRun=true -r linux-x64
+RUN dotnet publish "DemoServerlessPlatform.csproj" -c Release -o /app/publish -p PublishReadyToRun=true -r linux-arm64
 
 
 FROM base AS final

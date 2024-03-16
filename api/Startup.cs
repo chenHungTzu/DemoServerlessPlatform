@@ -46,6 +46,7 @@ public class Startup
                 });
             }
             services.AddSingleton<IDividerRepository, DividerRepository>();
+            services.AddAWSLambdaHosting(LambdaEventSource.RestApi);
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
