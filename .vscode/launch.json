@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "docker-run: debug",
             "netCore": {
-                "appProject": "${workspaceFolder}/DemoServerlessPlatform.csproj"
+                "appProject": "${workspaceFolder}/api/DemoServerlessPlatform.csproj"
             }
         }
     ]

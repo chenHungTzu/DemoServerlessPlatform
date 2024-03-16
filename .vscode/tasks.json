@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/DemoServerlessPlatform.csproj",
+                "${workspaceFolder}/api/DemoServerlessPlatform.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -22,12 +22,12 @@
             "dockerBuild": {
                 "tag": "webapi:dev",
                 "target": "base",
-                "dockerfile": "${workspaceFolder}/Dockerfile",
+                "dockerfile": "${workspaceFolder}/api/Dockerfile",
                 "context": "${workspaceFolder}",
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/DemoServerlessPlatform.csproj"
+                "appProject": "${workspaceFolder}/api/DemoServerlessPlatform.csproj"
             }
         },
         {
@@ -46,7 +46,7 @@
                 ],
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/DemoServerlessPlatform.csproj",
+                "appProject": "${workspaceFolder}/api/DemoServerlessPlatform.csproj",
                 "enableDebugging": true
             }
         }
