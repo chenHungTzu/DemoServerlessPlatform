@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace DemoSeverlessPlatform.Controllers;
+namespace DemoServerlessPlatform.Controllers;
 
 [Route("api/[controller]")]
 public class ValuesController : ControllerBase

@@ -8,17 +8,17 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["DemoSeverlessPlatform.csproj", "."]
-RUN dotnet restore "./././DemoSeverlessPlatform.csproj"
+COPY ["DemoServerlessPlatform.csproj", "."]
+RUN dotnet restore "./././DemoServerlessPlatform.csproj"
 COPY . .
 WORKDIR "/src/."
-RUN dotnet build "./DemoSeverlessPlatform.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build "./DemoServerlessPlatform.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./DemoSeverlessPlatform.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./DemoServerlessPlatform.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "DemoSeverlessPlatform.dll"]
+ENTRYPOINT ["dotnet", "DemoServerlessPlatform.dll"]

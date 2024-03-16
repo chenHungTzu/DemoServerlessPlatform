@@ -58,12 +58,12 @@ If already installed check if new version is available.
 
 Execute unit tests
 ```
-    cd "DemoSeverlessPlatform/test/DemoSeverlessPlatform.Tests"
+    cd "DemoServerlessPlatform/test/DemoServerlessPlatform.Tests"
     dotnet test
 ```
 
 Deploy application
 ```
-    cd "DemoSeverlessPlatform/src/DemoSeverlessPlatform"
+    cd "DemoServerlessPlatform/src/DemoServerlessPlatform"
     dotnet lambda deploy-serverless
 ```

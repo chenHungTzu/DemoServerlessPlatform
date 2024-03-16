@@ -1,4 +1,4 @@
-namespace DemoSeverlessPlatform;
+namespace DemoServerlessPlatform;
 
 public class Startup
 {
