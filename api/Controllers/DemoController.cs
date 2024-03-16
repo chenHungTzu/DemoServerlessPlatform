@@ -20,11 +20,18 @@ namespace DemoServerlessPlatform.Controllers
             this.dividerRepository = dividerRepository;
         }
 
+        /// <summary>
+        ///  local : http://localhost:55005/api/Demo/DivisionToWrite/{number}
+        ///  localstack : http://<agwId>.execute-api.localhost.localstack.cloud:4566/dev/api/Demo/DivisionToWrite/{number}
+        ///  aws : https://<agwId>.execute-api.ap-northeast-1.amazonaws.com/dev/api/Demo/DivisionToWrite/{number}
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns> 
         [HttpGet("DivisionToWrite/{number}")]
         public async Task<IActionResult> DivisionToWrite(int number)
         {
             try
-            {            
+            {
                 await dividerRepository.WriteToDatabase(new Divider(number, 3));
 
                 return Ok(number);
