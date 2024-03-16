@@ -1,0 +1,19 @@
+{
+    "AttributeDefinitions": [
+      {
+        "AttributeName": "Number",
+        "AttributeType": "N"
+      }
+    ],
+    "TableName": "table0-local",
+    "KeySchema": [
+      {
+        "AttributeName": "Number",
+        "KeyType": "HASH"
+      }
+    ],
+    "ProvisionedThroughput": {
+      "ReadCapacityUnits": 1,
+      "WriteCapacityUnits": 1
+    }
+  }

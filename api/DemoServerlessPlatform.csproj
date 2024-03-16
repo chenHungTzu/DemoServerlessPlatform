@@ -19,4 +19,9 @@
     <PackageReference Include="AWSSDK.Core" Version="3.7.302.19" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\domain\domain.csproj" />
+    <ProjectReference Include="..\infrastructure\infrastructure.csproj" />
+    <ProjectReference Include="..\misc\misc.csproj" />
+  </ItemGroup>
 </Project>

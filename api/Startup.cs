@@ -1,3 +1,9 @@
+using Amazon.DynamoDBv2;
+using Amazon.Runtime;
+using domain.adapter;
+using infrastructure;
+using misc;
+
 namespace DemoServerlessPlatform;
 
 public class Startup
@@ -13,6 +19,33 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddControllers();
+
+       if (EnvironmentVariable.MODE() == "local")
+            {
+                services.AddSingleton<IAmazonDynamoDB>(_ =>
+                {
+                    var config = new AmazonDynamoDBConfig
+                    {
+                        ServiceURL = EnvironmentVariable.DDB_ENDPOINT(),
+                        AuthenticationRegion = "ap-northeast-1",
+                        UseHttp = true,
+                    };
+                    var awsCredentials = new BasicAWSCredentials("accesskey", "secretkey");
+                    return new AmazonDynamoDBClient(awsCredentials, config);
+                });
+            }
+            else
+            {
+                services.AddSingleton<IAmazonDynamoDB>(_ =>
+                {
+                    var clientConfig = new AmazonDynamoDBConfig
+                    {
+                        RegionEndpoint = Amazon.RegionEndpoint.APNortheast1
+                    };
+                    return new AmazonDynamoDBClient(clientConfig);
+                });
+            }
+            services.AddSingleton<IDividerRepository, DividerRepository>();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline

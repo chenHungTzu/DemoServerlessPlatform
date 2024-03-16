@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using domain;
+using domain.adapter;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DemoServerlessPlatform.Controllers
@@ -11,22 +13,21 @@ namespace DemoServerlessPlatform.Controllers
     public class DemoController : ControllerBase
     {
 
-        public DemoController(){
+        private readonly IDividerRepository dividerRepository;
 
+        public DemoController(IDividerRepository dividerRepository)
+        {
+            this.dividerRepository = dividerRepository;
         }
 
         [HttpGet("DivisionToWrite/{number}")]
-        public IActionResult DivisionToWrite(int number)
+        public async Task<IActionResult> DivisionToWrite(int number)
         {
             try
-            {
-                // // 先宣告Repository
-                // var repository = new Demo_Normal_Repository();
+            {            
+                await dividerRepository.WriteToDatabase(new Divider(number, 3));
 
-                // // you can use 2 or 3 as the second parameter
-                // repository.WriteToDatabase(new Divider(number, 3));
-
-                return Ok();
+                return Ok(number);
             }
             catch (Exception ex)
             {

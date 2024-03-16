@@ -1,0 +1,18 @@
+version: "3"
+
+vars:
+  AWS_REGION: ap-northeast-1
+  LOCALSTACK_ENDPOINT: localhost:4566
+
+
+includes:
+  local:
+    taskfile: ./api/taskfile.local.yml
+    dir: ./api
+ 
+
+tasks:
+  local-up:
+    cmds:
+      - task: local:local-up
+    desc: "[local] 建立本地開發環境"

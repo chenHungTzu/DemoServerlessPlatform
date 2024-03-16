@@ -1,0 +1,106 @@
+version: "3"
+
+vars:
+  ARTIFACT_PATH: ./artifact/lambda.zip
+  FUNCTION_ENTRY: DemoServerlessPlatform
+  FUNCTION_NAME: divider_lambda
+  AGW_NAME: divider_agw
+
+tasks:
+  local-up:
+    internal: true
+    cmds: 
+     - docker-compose up -d
+     - task : local-create-table
+     - task : local-lambda-deploy
+     - task : local-agw-create-windows-amd64
+       platforms: [windows/amd64]
+     - task : local-agw-create-darwin
+       platforms: [darwin]
+     #- '{{if eq OS "windows"}} task local-agw-create-windows-amd64 {{else}} task local-agw-create-darwin {{end}}'
+     
+    desc: "[local] 啟動Localstack"
+
+  local-create-table:
+    internal: true
+    cmds:
+      - AWS_PAGER=""  aws dynamodb create-table --cli-input-json file://./schema/table0.json  --region {{.AWS_REGION}} --endpoint-url http://{{.LOCALSTACK_ENDPOINT}}  || true
+      - AWS_PAGER=""  aws dynamodb create-table --cli-input-json file://./schema/table1.json  --region {{.AWS_REGION}} --endpoint-url http://{{.LOCALSTACK_ENDPOINT}}  || true
+      - AWS_PAGER=""  aws dynamodb create-table --cli-input-json file://./schema/table2.json  --region {{.AWS_REGION}} --endpoint-url http://{{.LOCALSTACK_ENDPOINT}}  || true
+    desc: "[local] 建立DDB Table"
+
+  local-lambda-deploy:
+    internal: true
+    deps: [local-lambda-package]
+    cmds:
+      - AWS_PAGER=""  aws lambda delete-function
+        --function-name {{.FUNCTION_NAME}}
+        --region {{.AWS_REGION}} 
+        --endpoint-url=http://{{.LOCALSTACK_ENDPOINT}} || true
+
+      - AWS_PAGER="" aws lambda create-function
+        --function-name {{.FUNCTION_NAME}}
+        --zip-file fileb://{{.ARTIFACT_PATH}}
+        --handler {{.FUNCTION_ENTRY}}
+        --runtime dotnet6
+        --memory-size 512
+        --memory-size 512
+        --region {{.AWS_REGION}}
+        --endpoint-url=http://{{.LOCALSTACK_ENDPOINT}} 
+        --timeout 900
+        --role arn:aws:iam::000000000000:role/{{.ARTIFACT_PATH}}
+    desc: "[local] 部屬Lambda"
+
+  local-lambda-package:
+    internal: true
+    cmd: dotnet lambda package -o {{.ARTIFACT_PATH}}
+    desc: "[local] 打包Lambda"
+
+  local-lambda-get:
+    internal: true
+    cmd: aws lambda get-function --function-name {{.FUNCTION_NAME}} --endpoint-url=http://{{.LOCALSTACK_ENDPOINT}} --region={{.AWS_REGION}}
+    desc: "[local] 取得Lambda"
+
+
+  local-agw-delete-darwin:
+    internal: true
+    cmds:
+      - |
+        AGW_ID=$(aws apigateway get-rest-apis  --endpoint-url=http://{{.LOCALSTACK_ENDPOINT}}  --region={{.AWS_REGION}} | jq -r .items[0].id) 
+        AWS_PAGER="" aws apigateway delete-rest-api --rest-api-id ${AGW_ID} --endpoint-url=http://{{.LOCALSTACK_ENDPOINT}} --region={{.AWS_REGION}} || true
+    desc: "[local] 刪除 API Gateway"
+
+  local-agw-delete-windows-amd64:
+    internal: true
+    cmds: 
+      - |
+        AGW_ID=$(aws apigateway get-rest-apis  --endpoint-url=http://{{.LOCALSTACK_ENDPOINT}} --region=ap-northeast-1 | jq -r .items[0].id) 
+        AWS_PAGER="" aws apigateway delete-rest-api --rest-api-id ${AGW_ID//$'\r'} --endpoint-url=http://{{.LOCALSTACK_ENDPOINT}} --region={{.AWS_REGION}} || true
+    desc: "[local] 刪除 API Gateway"
+
+  local-agw-create-darwin: 
+    internal: true
+    deps: [local-agw-delete-darwin]
+    cmds:
+      - |
+        AGW_ID=$(aws apigateway create-rest-api --name "{{.AGW_NAME}}"  --endpoint-url=http://{{.LOCALSTACK_ENDPOINT}} --region={{.AWS_REGION}} | jq -r .id)
+        PARENT_RESOURCE_KEY=$(aws apigateway get-resources --endpoint-url=http://{{.LOCALSTACK_ENDPOINT}} --region={{.AWS_REGION}}  --rest-api-id ${AGW_ID}  | jq -r .items[0].id)
+        RESOURCE_ID=$(aws apigateway create-resource --rest-api-id ${AGW_ID} --parent-id ${PARENT_RESOURCE_KEY} --endpoint-url=http://{{.LOCALSTACK_ENDPOINT}} --region={{.AWS_REGION}} --path-part "{proxy+}" | jq -r .id)
+        AWS_PAGER="" aws apigateway put-method --rest-api-id ${AGW_ID} --resource-id ${RESOURCE_ID} --endpoint-url=http://{{.LOCALSTACK_ENDPOINT}} --region={{.AWS_REGION}} --http-method ANY --authorization-type "NONE"
+        AWS_PAGER="" aws apigateway put-integration --rest-api-id ${AGW_ID} --resource-id ${RESOURCE_ID} --endpoint-url=http://{{.LOCALSTACK_ENDPOINT}} --region={{.AWS_REGION}}  --type AWS_PROXY  --http-method ANY --integration-http-method ANY --uri arn:aws:apigateway:ap-northeast-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-northeast-1:000000000000:function:{{.FUNCTION_NAME}}/invocations  --passthrough-behavior WHEN_NO_MATCH
+        AWS_PAGER="" aws apigateway create-deployment --rest-api-id ${AGW_ID} --endpoint-url=http://{{.LOCALSTACK_ENDPOINT}} --region={{.AWS_REGION}} --stage-name dev 
+    desc: "[local] 建立Agw + Lambda Integration"
+
+
+  local-agw-create-windows-amd64: 
+    internal: true
+    deps: [local-agw-delete-windows-amd64]
+    cmds:  
+      - | 
+        AGW_ID=$(aws apigateway create-rest-api --name "{{.AGW_NAME}}"  --endpoint-url=http://{{.LOCALSTACK_ENDPOINT}} --region={{.AWS_REGION}} | jq -r .id)
+        PARENT_RESOURCE_KEY=$(aws apigateway get-resources --endpoint-url=http://{{.LOCALSTACK_ENDPOINT}} --region={{.AWS_REGION}}  --rest-api-id ${AGW_ID//$'\r'}   | jq -r .items[0].id)
+        RESOURCE_ID=$(aws apigateway create-resource --rest-api-id ${AGW_ID//$'\r'} --parent-id ${PARENT_RESOURCE_KEY//$'\r'} --endpoint-url=http://{{.LOCALSTACK_ENDPOINT}} --region={{.AWS_REGION}} --path-part "{proxy+}" | jq -r .id)
+        AWS_PAGER="" aws apigateway put-method --rest-api-id ${AGW_ID//$'\r'} --resource-id ${RESOURCE_ID//$'\r'} --endpoint-url=http://{{.LOCALSTACK_ENDPOINT}} --region={{.AWS_REGION}} --http-method ANY --authorization-type "NONE"
+        AWS_PAGER="" aws apigateway put-integration --rest-api-id ${AGW_ID//$'\r'} --resource-id ${RESOURCE_ID//$'\r'} --endpoint-url=http://{{.LOCALSTACK_ENDPOINT}} --region={{.AWS_REGION}}  --type AWS_PROXY  --http-method ANY --integration-http-method ANY --uri arn:aws:apigateway:ap-northeast-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-northeast-1:000000000000:function:{{.FUNCTION_NAME}}/invocations  --passthrough-behavior WHEN_NO_MATCH
+        AWS_PAGER="" aws apigateway create-deployment --rest-api-id ${AGW_ID//$'\r'} --endpoint-url=http://{{.LOCALSTACK_ENDPOINT}} --region={{.AWS_REGION}} --stage-name dev 
+    desc: "[local] 建立Agw + Lambda Integration"

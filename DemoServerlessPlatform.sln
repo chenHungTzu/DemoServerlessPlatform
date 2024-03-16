@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "infrastructure", "infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoServerlessPlatform", "api\DemoServerlessPlatform.csproj", "{8AA2AEE7-CE8B-4563-9CC4-33D2B296513E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "misc", "misc\misc.csproj", "{7A008CBE-D0BF-4093-9C24-DB112876E311}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{8AA2AEE7-CE8B-4563-9CC4-33D2B296513E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AA2AEE7-CE8B-4563-9CC4-33D2B296513E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AA2AEE7-CE8B-4563-9CC4-33D2B296513E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A008CBE-D0BF-4093-9C24-DB112876E311}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A008CBE-D0BF-4093-9C24-DB112876E311}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A008CBE-D0BF-4093-9C24-DB112876E311}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A008CBE-D0BF-4093-9C24-DB112876E311}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
