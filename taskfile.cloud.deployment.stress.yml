@@ -1,0 +1,14 @@
+
+
+version: "3"
+
+tasks:
+   #task --taskfile taskfile.cloud.deployment.stress.yml cloud-deploy-lambda
+   cloud-deploy-lambda:
+    cmds:
+      - aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 710320639477.dkr.ecr.ap-northeast-1.amazonaws.com
+      - docker build -f api/Dockerfile --force-rm -t divider-ecr .
+      - docker tag divider-ecr:latest 710320639477.dkr.ecr.ap-northeast-1.amazonaws.com/divider-ecr-stress:latest
+      - docker push 710320639477.dkr.ecr.ap-northeast-1.amazonaws.com/divider-ecr-stress:latest
+      - AWS_PAGER=""  aws lambda update-function-code --function-name arn:aws:lambda:ap-northeast-1:710320639477:function:divider-lambda-stress --image-uri 710320639477.dkr.ecr.ap-northeast-1.amazonaws.com/divider-ecr-stress:latest
+    desc: "[cloud] 上傳並更新Lambda"

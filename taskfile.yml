@@ -9,10 +9,25 @@ includes:
   local:
     taskfile: ./api/taskfile.local.yml
     dir: ./api
- 
+
+  cloud:
+    taskfile: ./api/taskfile.cloud.yml
+    dir: ./api
 
 tasks:
   local-up:
     cmds:
       - task: local:local-up
     desc: "[local] 建立本地開發環境"
+  cloud-up:
+    cmds:
+      - task: cloud:cloud-up
+    desc: "[cloud] 建立雲端環境"
+  cloud-down:
+    cmds:
+      - task: cloud:cloud-down
+    desc: "[cloud] 刪除雲端環境"
+  
+
+  
+  

@@ -1,0 +1,23 @@
+version: "3"
+
+tasks:
+  cloud-up:
+    internal: true
+    cmds: 
+     - task : cloud-infrastructure
+    desc: "[cloud] 建立aws環境"
+  cloud-down:
+    internal: true
+    dir : ./iac
+    cmds: 
+     - terraform destroy --auto-approve
+    desc: "[cloud] 刪除aws環境"
+  cloud-infrastructure:
+    internal: true
+    dir : ./iac
+    cmds :
+     - terraform init
+     - terraform fmt
+     - terraform validate
+     - terraform apply --auto-approve
+    desc: "[cloud] 建立aws環境"
