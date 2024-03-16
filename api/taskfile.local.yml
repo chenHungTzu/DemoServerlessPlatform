@@ -2,7 +2,7 @@ version: "3"
 
 vars:
   ARTIFACT_PATH: ./artifact/lambda.zip
-  FUNCTION_ENTRY: DemoServerlessPlatform
+  FUNCTION_ENTRY: DemoServerlessPlatform::DemoServerlessPlatform.LambdaEntryPoint::FunctionHandlerAsync
   FUNCTION_NAME: divider_lambda
   AGW_NAME: divider_agw
 
