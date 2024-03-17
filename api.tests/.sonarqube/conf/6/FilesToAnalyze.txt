@@ -4,3 +4,4 @@
 /Users/hungtzuchen/.nuget/packages/xunit.runner.visualstudio/2.5.7/build/net6.0/xunit.runner.reporters.netcoreapp10.dll
 /Users/hungtzuchen/.nuget/packages/xunit.runner.visualstudio/2.5.7/build/net6.0/xunit.runner.utility.netcoreapp10.dll
 /Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api.tests/TestResults/3adca920-d23f-4f03-8405-9671bc588abb/coverage.opencover.xml
+/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api.tests/TestResults/5c8b2f34-9742-43f0-9926-c96a2c167ba4/coverage.opencover.xml

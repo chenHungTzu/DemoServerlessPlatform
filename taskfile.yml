@@ -27,6 +27,11 @@ tasks:
       - task: local:local-up
     desc: "[local] 建立本地開發環境"
 
+  local-down:
+    cmds:
+      - task: local:local-down
+    desc: "[local] 移除本地開發環境"
+
   cloud-up:
     cmds:
       - task: cloud:cloud-up

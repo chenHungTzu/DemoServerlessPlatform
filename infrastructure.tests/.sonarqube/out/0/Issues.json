@@ -54,27 +54,6 @@
           }
         },
         {
-          "ruleId": "S5332",
-          "level": "warning",
-          "message": "Using http protocol is insecure. Use https instead.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/misc/EnvironmentVariable.cs",
-                "region": {
-                  "startLine": 9,
-                  "startColumn": 93,
-                  "endLine": 9,
-                  "endColumn": 127
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "S1125",
           "level": "warning",
           "message": "Remove the unnecessary Boolean literal(s).",
@@ -87,6 +66,27 @@
                   "startColumn": 39,
                   "endLine": 13,
                   "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S5332",
+          "level": "warning",
+          "message": "Using http protocol is insecure. Use https instead.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/misc/EnvironmentVariable.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 93,
+                  "endLine": 9,
+                  "endColumn": 127
                 }
               }
             }

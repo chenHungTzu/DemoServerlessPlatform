@@ -33,27 +33,6 @@
           }
         },
         {
-          "ruleId": "CS8600",
-          "level": "warning",
-          "message": "正在將 Null 常值或可能的 Null 值轉換為不可為 Null 的型別。",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/testbase/PriorityOrder.cs",
-                "region": {
-                  "startLine": 44,
-                  "startColumn": 49,
-                  "endLine": 44,
-                  "endColumn": 55
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "CS0168",
           "level": "warning",
           "message": "已宣告變數 'ex'，但從未使用過它",
@@ -72,6 +51,27 @@
           ],
           "properties": {
             "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS8600",
+          "level": "warning",
+          "message": "正在將 Null 常值或可能的 Null 值轉換為不可為 Null 的型別。",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/testbase/PriorityOrder.cs",
+                "region": {
+                  "startLine": 44,
+                  "startColumn": 49,
+                  "endLine": 44,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
           }
         }
       ],

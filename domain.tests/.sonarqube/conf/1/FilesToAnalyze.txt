@@ -3,3 +3,4 @@
 /Users/hungtzuchen/.nuget/packages/xunit.runner.visualstudio/2.5.7/build/net6.0/xunit.runner.visualstudio.testadapter.dll
 /Users/hungtzuchen/.nuget/packages/xunit.runner.visualstudio/2.5.7/build/net6.0/xunit.runner.reporters.netcoreapp10.dll
 /Users/hungtzuchen/.nuget/packages/xunit.runner.visualstudio/2.5.7/build/net6.0/xunit.runner.utility.netcoreapp10.dll
+/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/domain.tests/TestResults/12e26f8e-c809-4492-987b-81ad6728b2d3/coverage.opencover.xml

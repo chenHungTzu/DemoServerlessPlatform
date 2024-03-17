@@ -21,6 +21,13 @@ tasks:
      
     desc: "[local] 啟動Localstack"
 
+  local-down:
+    internal: true
+    cmds: 
+     - docker-compose down
+     
+    desc: "[local] 關閉Localstack"
+
   local-create-table:
     internal: true
     cmds:

@@ -2,5 +2,5 @@ projectKey=Infrastructure
 serverUrl=http://localhost:9000
 serverVersion=10.4.1.88267
 dashboardUrl=http://localhost:9000/dashboard?id=Infrastructure
-ceTaskId=eb390bac-c63b-4b74-9dff-629ef18e4aa4
-ceTaskUrl=http://localhost:9000/api/ce/task?id=eb390bac-c63b-4b74-9dff-629ef18e4aa4
+ceTaskId=536f7703-d713-4ec3-a665-fc612de08826
+ceTaskUrl=http://localhost:9000/api/ce/task?id=536f7703-d713-4ec3-a665-fc612de08826

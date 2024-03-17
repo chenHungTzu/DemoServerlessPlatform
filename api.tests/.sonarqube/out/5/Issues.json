@@ -12,18 +12,18 @@
       },
       "results": [
         {
-          "ruleId": "CS1998",
+          "ruleId": "S1118",
           "level": "warning",
-          "message": "這個非同步方法缺少 'await' 運算子，因此將以同步方式執行。請考慮使用 'await' 運算子等候未封鎖的應用程式開發介面呼叫，或使用 'await Task.Run(...)' 在背景執行緒上執行 CPU-bound 工作。",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/testbase/IntegrationTestBase.cs",
+                "uri": "file:///Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api/LocalEntryPoint.cs",
                 "region": {
-                  "startLine": 26,
-                  "startColumn": 27,
-                  "endLine": 26,
-                  "endColumn": 42
+                  "startLine": 6,
+                  "startColumn": 14,
+                  "endLine": 6,
+                  "endColumn": 29
                 }
               }
             }
@@ -33,39 +33,18 @@
           }
         },
         {
-          "ruleId": "CS0168",
+          "ruleId": "S1186",
           "level": "warning",
-          "message": "已宣告變數 'ex'，但從未使用過它",
+          "message": "Add a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/testbase/Cleaner.cs",
+                "uri": "file:///Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api/LambdaEntryPoint.cs",
                 "region": {
-                  "startLine": 43,
-                  "startColumn": 30,
-                  "endLine": 43,
-                  "endColumn": 32
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 3
-          }
-        },
-        {
-          "ruleId": "CS8600",
-          "level": "warning",
-          "message": "正在將 Null 常值或可能的 Null 值轉換為不可為 Null 的型別。",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/testbase/PriorityOrder.cs",
-                "region": {
-                  "startLine": 44,
-                  "startColumn": 49,
-                  "endLine": 44,
-                  "endColumn": 55
+                  "startLine": 42,
+                  "startColumn": 29,
+                  "endLine": 42,
+                  "endColumn": 33
                 }
               }
             }
@@ -76,45 +55,37 @@
         }
       ],
       "rules": {
-        "CS0168": {
-          "id": "CS0168",
-          "shortDescription": "已宣告變數，但從未使用過它",
+        "S1118": {
+          "id": "S1118",
+          "shortDescription": "Utility classes should not have public constructors",
+          "fullDescription": "Whenever there are portions of code that are duplicated and do not depend on the state of their container class, they can be centralized inside a \"utility class\". A utility class is a class that only has static members, hence it should not be instantiated.",
           "defaultLevel": "warning",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS0168)",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1118",
           "properties": {
-            "category": "Compiler",
+            "category": "Major Code Smell",
             "isEnabledByDefault": true,
             "tags": [
-              "Compiler",
-              "Telemetry"
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
             ]
           }
         },
-        "CS1998": {
-          "id": "CS1998",
-          "shortDescription": "Async 方法缺乏 'await' 運算子，將同步執行",
+        "S1186": {
+          "id": "S1186",
+          "shortDescription": "Methods should not be empty",
+          "fullDescription": "An empty method is generally considered bad practice and can lead to confusion, readability, and maintenance issues. Empty methods bring no functionality and are misleading to others as they might think the method implementation fulfills a specific and identified requirement.",
           "defaultLevel": "warning",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS1998)",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1186",
           "properties": {
-            "category": "Compiler",
+            "category": "Critical Code Smell",
             "isEnabledByDefault": true,
             "tags": [
-              "Compiler",
-              "Telemetry"
-            ]
-          }
-        },
-        "CS8600": {
-          "id": "CS8600",
-          "shortDescription": "正在將 Null 常值或可能的 Null 值轉換為不可為 Null 的型別。",
-          "defaultLevel": "warning",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8600)",
-          "properties": {
-            "category": "Compiler",
-            "isEnabledByDefault": true,
-            "tags": [
-              "Compiler",
-              "Telemetry"
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
             ]
           }
         }

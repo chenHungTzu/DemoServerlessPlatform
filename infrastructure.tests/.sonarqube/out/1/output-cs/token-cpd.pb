@@ -1,42 +1,4 @@
-Ç
-[/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/domain/adapter/IDividerRepository.cs
-	namespace 	
-domain
- 
-. 
-adapter 
-{ 
-public 
-
-	interface 
-IDividerRepository '
-{ 
-public
-
- 
-Task
-
- 
-WriteToDatabase
-
- #
-(
-
-# $
-Divider
-
-$ +
-divider
-
-, 3
-)
-
-3 4
-;
-
-4 5
-} 
-} Ó
+Ó
 H/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/domain/Divider.cs
 	namespace 	
 domain
@@ -151,4 +113,42 @@ H/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/domain/Divider.cs
 }!! 
 ;!! 
 }"" 	
-}## 
+}## Ç
+[/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/domain/adapter/IDividerRepository.cs
+	namespace 	
+domain
+ 
+. 
+adapter 
+{ 
+public 
+
+	interface 
+IDividerRepository '
+{ 
+public
+
+ 
+Task
+
+ 
+WriteToDatabase
+
+ #
+(
+
+# $
+Divider
+
+$ +
+divider
+
+, 3
+)
+
+3 4
+;
+
+4 5
+} 
+} 
