@@ -1,0 +1,1 @@
+/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/infrastructure.tests/.sonarqube/out/4

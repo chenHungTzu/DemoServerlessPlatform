@@ -1,5 +1,6 @@
 version: "3"
 
+
 tasks:
 
   sonarqube-up:
@@ -17,7 +18,7 @@ tasks:
     internal: true
     cmds:
       - |
-        while [ "$(curl -L -X 'http://localhost:9000/api/system/status'| jq -r .status)" != "UP" ]; do
+        while [ "$(curl -l 'http://localhost:9000/api/system/status'| jq -r .status)" != "UP" ]; do
           echo "Waiting for URL Sonarqube to be available..."
           {{if eq OS "windows"}} timeout /t 5 {{else}} sleep 5 {{end}}       
         done
@@ -26,13 +27,12 @@ tasks:
   sonarqube-create-all:
     internal: true
     cmds:
-      - task sonarqube-create-project project="domain"
-      - task sonarqube-create-project project="Infrastructure"
-      - task sonarqube-create-project project="api"
+      - task testreport:sonarqube-create-project project="domain"
+      - task testreport:sonarqube-create-project project="Infrastructure"
+      - task testreport:sonarqube-create-project project="api"
     desc: "[sonarqube]建立Sonarqube專案"
 
   sonarqube-create-project:
-    internal: true
     cmds:
       - curl -L -X POST
         'http://'$SONARQUBE_DEFAULT_LOGIN':'$SONARQUBE_DEFAULT_PWD'@{{.SONARQUBE_ENDPOINT}}/api/projects/create?name={{.project}}&project={{.project}}'
@@ -43,14 +43,13 @@ tasks:
   sonarscan-all:
     internal: true
     cmds:
-      - task sonarscan-project-dotnet project="api" SONARQUBE_LOGIN_TOKEN=$SONARQUBE_LOGIN_TOKEN_api
-      - task sonarscan-project-dotnet project="domain" SONARQUBE_LOGIN_TOKEN=$SONARQUBE_LOGIN_TOKEN_domain
-      - task sonarscan-project-dotnet project="Infrastructure" SONARQUBE_LOGIN_TOKEN=$SONARQUBE_LOGIN_TOKEN_Infrastructure
+      - task testreport:sonarscan-project-dotnet project="api" SONARQUBE_LOGIN_TOKEN=$SONARQUBE_LOGIN_TOKEN_api
+      - task testreport:sonarscan-project-dotnet project="domain" SONARQUBE_LOGIN_TOKEN=$SONARQUBE_LOGIN_TOKEN_domain
+      - task testreport:sonarscan-project-dotnet project="Infrastructure" SONARQUBE_LOGIN_TOKEN=$SONARQUBE_LOGIN_TOKEN_Infrastructure
     desc: "[sonarqube]掃描所有專案"
 
   #prerequest : (JAVA RUNTIME) https://www.oracle.com/tw/java/technologies/downloads/#jdk21-mac
   sonarscan-project-dotnet:   
-    internal: true
     dir: ./{{.project}}.tests
     cmds:
       - dotnet sonarscanner begin
@@ -61,7 +60,6 @@ tasks:
         /d:sonar.login={{.SONARQUBE_LOGIN_TOKEN}}
       - dotnet build
       - dotnet test --no-build
-        --logger "xunit;"
         --collect:"XPlat Code Coverage"
         -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
       - dotnet sonarscanner end

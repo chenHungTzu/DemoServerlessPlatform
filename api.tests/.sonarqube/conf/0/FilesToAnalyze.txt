@@ -1,0 +1,2 @@
+﻿/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/misc/EnvironmentVariable.cs
+/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/misc/SystemUtil.cs

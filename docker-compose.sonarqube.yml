@@ -1,0 +1,39 @@
+version: "3"
+
+# prerequest : 
+# <windows> 
+# > wsl -d docker-desktop
+# > cat 262144 >> proc/sys/vm/max_map_count
+# defalt user:pwd = admin:admin
+
+services:
+  sonarqube:
+    image: sonarqube
+    hostname: sonarqube
+    container_name: sonarqube
+    # volumes:
+    #   - sonarqube_data:/opt/sonarqube/data
+    #   - sonarqube_extensions:/opt/sonarqube/extensions
+    #   - sonarqube_logs:/opt/sonarqube/logs
+    ports:
+      - "9000:9000"
+
+# volumes:
+#   sonarqube_data:
+#     driver: local
+#     driver_opts:
+#       type: 'none'
+#       o: 'bind'
+#       device: './dev/sonarqube/data'
+#   sonarqube_extensions:
+#     driver: local
+#     driver_opts:
+#       type: 'none'
+#       o: 'bind'
+#       device: './dev/sonarqube/extensions'
+#   sonarqube_logs:
+#     driver: local
+#     driver_opts:
+#       type: 'none'
+#       o: 'bind'
+#       device: './dev/sonarqube/logs'

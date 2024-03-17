@@ -1,0 +1,2 @@
+﻿/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/domain/adapter/IDividerRepository.cs
+/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/domain/Divider.cs

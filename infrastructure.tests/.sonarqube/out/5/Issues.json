@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# 編譯器",
+        "version": "4.9.0.0",
+        "fileVersion": "4.9.0-3.24067.18 (4fc721bb)",
+        "semanticVersion": "4.9.0",
+        "language": "zh-TW"
+      },
+      "results": [
+        {
+          "ruleId": "CS8601",
+          "level": "warning",
+          "message": "可能有 Null 參考指派。",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/infrastructure.tests/DividerRepositoryIntegrationTest.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 34,
+                  "endLine": 18,
+                  "endColumn": 105
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "退出建構函式時，不可為 Null 的 欄位 '_dividerRepository' 必須包含非 Null 值。請考慮將 欄位 宣告為可為 Null。",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/infrastructure.tests/DividerRepositoryIntegrationTest.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 16,
+                  "endLine": 16,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/infrastructure.tests/DividerRepositoryIntegrationTest.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 45,
+                  "endLine": 14,
+                  "endColumn": 63
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "CS8601": {
+          "id": "CS8601",
+          "shortDescription": "可能有 Null 參考指派。",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8601)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8618": {
+          "id": "CS8618",
+          "shortDescription": "退出建構函式時，不可為 Null 的欄位必須包含非 Null 值。請考慮宣告為可為 Null。",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8618)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
