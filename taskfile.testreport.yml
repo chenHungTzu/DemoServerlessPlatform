@@ -1,0 +1,70 @@
+version: "3"
+
+tasks:
+
+  sonarqube-up:
+    internal : true
+    cmds:
+      - '{{if eq OS "windows"}} powershell rm Taskfile.sonar.env | true {{else}} rm Taskfile.sonar.env | true {{end}}'
+      - echo "SONARQUBE_DEFAULT_LOGIN=admin" >> Taskfile.sonar.env
+      - echo "SONARQUBE_DEFAULT_PWD=admin" >> Taskfile.sonar.env
+      - docker-compose  -f docker-compose.sonarqube.yml up -d
+      - task : sonarqube-wait-start
+      - task : sonarqube-create-all
+    desc: "[sonarqube]啟動sonarqube"
+
+  sonarqube-wait-start:
+    internal: true
+    cmds:
+      - |
+        while [ "$(curl -L -X 'http://localhost:9000/api/system/status'| jq -r .status)" != "UP" ]; do
+          echo "Waiting for URL Sonarqube to be available..."
+          {{if eq OS "windows"}} timeout /t 5 {{else}} sleep 5 {{end}}       
+        done
+    desc: "[sonarqube]等待sonarqube就緒"
+  
+  sonarqube-create-all:
+    internal: true
+    cmds:
+      - task sonarqube-create-project project="domain"
+      - task sonarqube-create-project project="Infrastructure"
+      - task sonarqube-create-project project="api"
+    desc: "[sonarqube]建立Sonarqube專案"
+
+  sonarqube-create-project:
+    internal: true
+    cmds:
+      - curl -L -X POST
+        'http://'$SONARQUBE_DEFAULT_LOGIN':'$SONARQUBE_DEFAULT_PWD'@{{.SONARQUBE_ENDPOINT}}/api/projects/create?name={{.project}}&project={{.project}}'
+      - curl -L -X POST
+        'http://'$SONARQUBE_DEFAULT_LOGIN':'$SONARQUBE_DEFAULT_PWD'@{{.SONARQUBE_ENDPOINT}}/api/user_tokens/generate?name={{.project}}&projectkey={{.project}}' | jq -r '"SONARQUBE_LOGIN_TOKEN_{{.project}}:" + .token' >> Taskfile.sonar.env
+    desc: "[sonarqube]建立測試專案"
+
+  sonarscan-all:
+    internal: true
+    cmds:
+      - task sonarscan-project-dotnet project="api" SONARQUBE_LOGIN_TOKEN=$SONARQUBE_LOGIN_TOKEN_api
+      - task sonarscan-project-dotnet project="domain" SONARQUBE_LOGIN_TOKEN=$SONARQUBE_LOGIN_TOKEN_domain
+      - task sonarscan-project-dotnet project="Infrastructure" SONARQUBE_LOGIN_TOKEN=$SONARQUBE_LOGIN_TOKEN_Infrastructure
+    desc: "[sonarqube]掃描所有專案"
+
+  #prerequest : (JAVA RUNTIME) https://www.oracle.com/tw/java/technologies/downloads/#jdk21-mac
+  sonarscan-project-dotnet:   
+    internal: true
+    dir: ./{{.project}}.tests
+    cmds:
+      - dotnet sonarscanner begin
+        /k:{{.project}}
+        /d:sonar.host.url=http://{{.SONARQUBE_ENDPOINT}}
+        /d:sonar.cs.xunit.reportsPaths=**/TestResults/**/TestResults.xml
+        /d:sonar.cs.opencover.reportsPaths=**/TestResults/**/coverage.opencover.xml
+        /d:sonar.login={{.SONARQUBE_LOGIN_TOKEN}}
+      - dotnet build
+      - dotnet test --no-build
+        --logger "xunit;"
+        --collect:"XPlat Code Coverage"
+        -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+      - dotnet sonarscanner end
+        /d:sonar.login={{.SONARQUBE_LOGIN_TOKEN}}
+    desc: "[sonarqube] sonarscan all dotnet project"
+  

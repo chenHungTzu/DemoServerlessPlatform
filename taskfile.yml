@@ -13,21 +13,34 @@ includes:
   cloud:
     taskfile: ./api/taskfile.cloud.yml
     dir: ./api
+  
+  testreport:
+    taskfile: ./taskfile.testreport.yml
+    dir: .
 
 tasks:
   local-up:
     cmds:
       - task: local:local-up
     desc: "[local] 建立本地開發環境"
+
   cloud-up:
     cmds:
       - task: cloud:cloud-up
     desc: "[cloud] 建立雲端環境"
+
   cloud-down:
     cmds:
       - task: cloud:cloud-down
     desc: "[cloud] 刪除雲端環境"
-  
 
-  
+  test-platform-init:
+    cmds:
+        - task: testreport:sonarqube-up
+    desc : "[test] 產生測試平台-soanrqube"
+
+  test-report-create:
+    cmds:
+        - task: testreport:sonarscan-all 
+    desc : "[test] 產生測試報告"
   
