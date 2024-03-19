@@ -5,12 +5,8 @@
 <img src="./img/main.png" style="zoom:70%;" />
 
 
----
-
 
 # 先決條件
-
----
 
 先進行必要的CLI安裝，方能進行環境的啟動，請安裝以下內容 :
 
@@ -26,8 +22,6 @@
 * 🔲 [**Commandeer**](https://getcommandeer.com/) : GUI用於檢視本地端所建立的資源。
 
 # 專案目錄
-
----
 
 ```bash
 ├── DemoServerlessPlatform
@@ -65,8 +59,6 @@
 ```
 
 # 快速開始
-
----
 
  確認滿足此專案的[先決條件](#先決條件)後，運行以下指令:
 
