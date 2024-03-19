@@ -68,7 +68,7 @@
 
 > 此指令會隱含執行 `local-deploy` 。
 
-* 部屬本地環境
+* 部屬本地應用
 
 ```sh
 > task local-deploy
