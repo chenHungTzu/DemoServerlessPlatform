@@ -1,22 +1,4 @@
-À
-V/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/testbase/IntegrationTestBase.cs
-
- $
-
-
-' = '(
-# 3 !" 2!!" 2
-: P* @$ :
-
- &
-
- )
-
-G W
-_ h$$ %
-!! &&! 0
-"" &&; B
-&& '' ®
+®
 X/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/testbase/MockHttpClientFactory.cs
 
  &
@@ -42,29 +24,25 @@ Y/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/testbase/IntegrationTest
  '
 		) 8 
  "  0
- # ô
-P/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/testbase/PriorityOrder.cs
- &g |
-		) 1 
-  
+ # À
+V/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/testbase/IntegrationTestBase.cs
 
-  
+ $
+
+
+' = '(
+# 3 !" 2!!" 2
+: P* @$ :
 
-& 4F
-5 > $L Uh q? H ## "
-W `+ 4(
-  )  ! .  G T
-  + 3
-  ; C  U ]
-"" ""M N
-"" ""g h
+ &
 
-'' )
-''* .''D H''^ b2
-''0 6'' ''J P(( ** 
-''R \,, // 
-''c f,,' *// <
-** ,,0 6,,@ F.. // $11 È
+ )
+
+G W
+_ h$$ %
+!! &&! 0
+"" &&; B
+&& '' È
 J/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/testbase/Cleaner.cs
 
  

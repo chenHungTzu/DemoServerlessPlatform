@@ -52,27 +52,6 @@
           "properties": {
             "warningLevel": 3
           }
-        },
-        {
-          "ruleId": "CS8600",
-          "level": "warning",
-          "message": "正在將 Null 常值或可能的 Null 值轉換為不可為 Null 的型別。",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/testbase/PriorityOrder.cs",
-                "region": {
-                  "startLine": 44,
-                  "startColumn": 49,
-                  "endLine": 44,
-                  "endColumn": 55
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
         }
       ],
       "rules": {
@@ -95,20 +74,6 @@
           "shortDescription": "Async 方法缺乏 'await' 運算子，將同步執行",
           "defaultLevel": "warning",
           "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS1998)",
-          "properties": {
-            "category": "Compiler",
-            "isEnabledByDefault": true,
-            "tags": [
-              "Compiler",
-              "Telemetry"
-            ]
-          }
-        },
-        "CS8600": {
-          "id": "CS8600",
-          "shortDescription": "正在將 Null 常值或可能的 Null 值轉換為不可為 Null 的型別。",
-          "defaultLevel": "warning",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8600)",
           "properties": {
             "category": "Compiler",
             "isEnabledByDefault": true,

@@ -5,5 +5,5 @@
   <FilesToAnalyzePath>/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/infrastructure.tests/.sonarqube/conf/5/FilesToAnalyze.txt</FilesToAnalyzePath>
   <OutPath>/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/infrastructure.tests/.sonarqube/out/5</OutPath>
   <ProjectType>Test</ProjectType>
-  <TargetFramework>net8.0</TargetFramework>
+  <TargetFramework>net6.0</TargetFramework>
 </SonarProjectConfig>

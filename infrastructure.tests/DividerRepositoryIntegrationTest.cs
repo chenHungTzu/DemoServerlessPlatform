@@ -21,7 +21,7 @@ namespace infrastructure.tests
         /// <summary>
         /// 是否正確寫入資料庫
         /// </summary>
-        [Theory , TestPriority(0)]
+        [Theory]
         [InlineData(0, "table0")]
         [InlineData(1, "table1")]
         [InlineData(2, "table2")]

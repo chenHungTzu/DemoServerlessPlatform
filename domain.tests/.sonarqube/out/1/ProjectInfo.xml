@@ -3,7 +3,7 @@
   <ProjectName>domain.tests</ProjectName>
   <ProjectLanguage>C#</ProjectLanguage>
   <ProjectType>Test</ProjectType>
-  <ProjectGuid>c687ca09-b589-4307-bdf6-b9890324c7b0</ProjectGuid>
+  <ProjectGuid>265d6e32-315f-4b86-bf05-b992bbda8378</ProjectGuid>
   <FullPath>/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/domain.tests/domain.tests.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResults>
@@ -15,5 +15,5 @@
   </AnalysisSettings>
   <Configuration>Debug</Configuration>
   <Platform>AnyCPU</Platform>
-  <TargetFramework>net8.0</TargetFramework>
+  <TargetFramework>net6.0</TargetFramework>
 </ProjectInfo>

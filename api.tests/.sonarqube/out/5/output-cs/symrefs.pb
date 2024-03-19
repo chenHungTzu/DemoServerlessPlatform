@@ -1,4 +1,14 @@
-·
+–
+N/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api/LambdaEntryPoint.cs
+
+		 
+
+  
+1 8 
+
+**  
+
+**. 5·
 E/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api/Startup.cs
 
  
@@ -25,17 +35,7 @@ M/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api/LocalEntryPoint.cs
 
  
 : >" &
-& 0 –
-N/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api/LambdaEntryPoint.cs
-
-		 
-
-  
-1 8 
-
-**  
-
-**. 5È
+& 0 È
 X/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api/Controllers/DemoController.cs
 
  

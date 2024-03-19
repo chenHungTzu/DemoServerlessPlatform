@@ -3,7 +3,7 @@
   <ProjectName>infrastructure.tests</ProjectName>
   <ProjectLanguage>C#</ProjectLanguage>
   <ProjectType>Test</ProjectType>
-  <ProjectGuid>ce11dc90-b912-450b-aa4f-3e0186e45809</ProjectGuid>
+  <ProjectGuid>15e284bc-375f-4b35-8499-26c171432676</ProjectGuid>
   <FullPath>/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/infrastructure.tests/infrastructure.tests.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResults>
@@ -15,5 +15,5 @@
   </AnalysisSettings>
   <Configuration>Debug</Configuration>
   <Platform>AnyCPU</Platform>
-  <TargetFramework>net8.0</TargetFramework>
+  <TargetFramework>net6.0</TargetFramework>
 </ProjectInfo>

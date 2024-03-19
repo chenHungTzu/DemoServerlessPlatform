@@ -27,12 +27,22 @@ tasks:
   sonarqube-create-all:
     internal: true
     cmds:
-      - task testreport:sonarqube-create-project project="domain"
-      - task testreport:sonarqube-create-project project="Infrastructure"
-      - task testreport:sonarqube-create-project project="api"
+      - task: sonarqube-create-project
+        vars: 
+          project: "domain"
+      - task: sonarqube-create-project
+        vars: 
+          project: "infrastructure"
+      - task: sonarqube-create-project
+        vars: 
+          project: "api"
+      # - task testreport:sonarqube-create-project project="domain"
+      # - task testreport:sonarqube-create-project project="infrastructure"
+      # - task testreport:sonarqube-create-project project="api"
     desc: "[sonarqube]建立Sonarqube專案"
 
   sonarqube-create-project:
+    internal: true
     cmds:
       - curl -L -X POST
         'http://'$SONARQUBE_DEFAULT_LOGIN':'$SONARQUBE_DEFAULT_PWD'@{{.SONARQUBE_ENDPOINT}}/api/projects/create?name={{.project}}&project={{.project}}'
@@ -43,13 +53,26 @@ tasks:
   sonarscan-all:
     internal: true
     cmds:
-      - task testreport:sonarscan-project-dotnet project="api" SONARQUBE_LOGIN_TOKEN=$SONARQUBE_LOGIN_TOKEN_api
-      - task testreport:sonarscan-project-dotnet project="domain" SONARQUBE_LOGIN_TOKEN=$SONARQUBE_LOGIN_TOKEN_domain
-      - task testreport:sonarscan-project-dotnet project="Infrastructure" SONARQUBE_LOGIN_TOKEN=$SONARQUBE_LOGIN_TOKEN_Infrastructure
+      - task: sonarscan-project-dotnet
+        vars: 
+          project: "api"
+          SONARQUBE_LOGIN_TOKEN: $SONARQUBE_LOGIN_TOKEN_api
+      - task: sonarscan-project-dotnet
+        vars: 
+          project: "domain"
+          SONARQUBE_LOGIN_TOKEN: $SONARQUBE_LOGIN_TOKEN_domain
+      - task: sonarscan-project-dotnet
+        vars: 
+          project: "infrastructure"
+          SONARQUBE_LOGIN_TOKEN: $SONARQUBE_LOGIN_TOKEN_infrastructure
+      # - task testreport:sonarscan-project-dotnet project="api" SONARQUBE_LOGIN_TOKEN=$SONARQUBE_LOGIN_TOKEN_api
+      # - task testreport:sonarscan-project-dotnet project="domain" SONARQUBE_LOGIN_TOKEN=$SONARQUBE_LOGIN_TOKEN_domain
+      # - task testreport:sonarscan-project-dotnet project="Infrastructure" SONARQUBE_LOGIN_TOKEN=$SONARQUBE_LOGIN_TOKEN_infrastructure
     desc: "[sonarqube]掃描所有專案"
 
   #prerequest : (JAVA RUNTIME) https://www.oracle.com/tw/java/technologies/downloads/#jdk21-mac
   sonarscan-project-dotnet:   
+    internal: true
     dir: ./{{.project}}.tests
     cmds:
       - dotnet sonarscanner begin

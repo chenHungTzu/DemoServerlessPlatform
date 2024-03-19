@@ -27,6 +27,11 @@ tasks:
       - task: local:local-up
     desc: "[local] 建立本地開發環境"
 
+  local-deploy:
+    cmds:
+      - task: local:local-deploy
+    desc: "[local] 部屬本地應用程式"
+
   local-down:
     cmds:
       - task: local:local-down
@@ -44,11 +49,11 @@ tasks:
 
   test-platform-init:
     cmds:
-        - task: testreport:sonarqube-up
+      - task: testreport:sonarqube-up
     desc : "[test] 產生測試平台-soanrqube"
 
   test-report-create:
     cmds:
-        - task: testreport:sonarscan-all 
+      - task: testreport:sonarscan-all 
     desc : "[test] 產生測試報告"
   

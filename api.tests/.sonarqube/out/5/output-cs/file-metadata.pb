@@ -1,8 +1,8 @@
 ‘
-…/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api/obj/Debug/net6.0/DemoServerlessPlatform.MvcApplicationPartsAssemblyInfo.csutf-8
-t/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api/obj/Debug/net6.0/DemoServerlessPlatform.GlobalUsings.g.csutf-8}
+…/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api/obj/Debug/net6.0/DemoServerlessPlatform.MvcApplicationPartsAssemblyInfo.csutf-8}
 r/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api/obj/Debug/net6.0/DemoServerlessPlatform.AssemblyInfo.csutf-8…
-z/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.csutf-8N
+z/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.csutf-8
+t/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api/obj/Debug/net6.0/DemoServerlessPlatform.GlobalUsings.g.csutf-8N
 E/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api/Startup.csutf-8V
 M/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api/LocalEntryPoint.csutf-8W
 N/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api/LambdaEntryPoint.csutf-8a

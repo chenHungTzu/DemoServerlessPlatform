@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
-  <ProjectName>misc</ProjectName>
+  <ProjectName>domain</ProjectName>
   <ProjectLanguage>C#</ProjectLanguage>
   <ProjectType>Product</ProjectType>
-  <ProjectGuid>7ab8813f-10bd-4fbf-84e8-75e3e224e671</ProjectGuid>
-  <FullPath>/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/misc/misc.csproj</FullPath>
+  <ProjectGuid>55988da0-79ed-42bb-aef5-6c57ad15f168</ProjectGuid>
+  <FullPath>/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/domain/domain.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResults>
     <AnalysisResult Id="FilesToAnalyze" Location="/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api.tests/.sonarqube/conf/1/FilesToAnalyze.txt" />

@@ -2,4 +2,3 @@
 /Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/testbase/IntegrationTestBase.cs
 /Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/testbase/IntegrationTestFixture.cs
 /Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/testbase/MockHttpClientFactory.cs
-/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/testbase/PriorityOrder.cs

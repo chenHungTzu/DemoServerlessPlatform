@@ -1,2 +1,2 @@
-﻿/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/misc/EnvironmentVariable.cs
-/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/misc/SystemUtil.cs
+﻿/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/domain/adapter/IDividerRepository.cs
+/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/domain/Divider.cs

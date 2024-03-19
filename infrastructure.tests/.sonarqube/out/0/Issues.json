@@ -18,27 +18,6 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/misc/SystemUtil.cs",
-                "region": {
-                  "startLine": 5,
-                  "startColumn": 20,
-                  "endLine": 5,
-                  "endColumn": 30
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1118",
-          "level": "warning",
-          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
-          "locations": [
-            {
-              "resultFile": {
                 "uri": "file:///Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/misc/EnvironmentVariable.cs",
                 "region": {
                   "startLine": 5,
@@ -54,18 +33,18 @@
           }
         },
         {
-          "ruleId": "S1125",
+          "ruleId": "S1118",
           "level": "warning",
-          "message": "Remove the unnecessary Boolean literal(s).",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/misc/SystemUtil.cs",
                 "region": {
-                  "startLine": 13,
-                  "startColumn": 39,
-                  "endLine": 13,
-                  "endColumn": 46
+                  "startLine": 5,
+                  "startColumn": 20,
+                  "endLine": 5,
+                  "endColumn": 30
                 }
               }
             }
@@ -87,6 +66,27 @@
                   "startColumn": 93,
                   "endLine": 9,
                   "endColumn": 127
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/misc/SystemUtil.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 39,
+                  "endLine": 13,
+                  "endColumn": 46
                 }
               }
             }

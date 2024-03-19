@@ -20,6 +20,12 @@ tasks:
      #- '{{if eq OS "windows"}} task local-agw-create-windows-amd64 {{else}} task local-agw-create-darwin {{end}}'
      
     desc: "[local] 啟動Localstack"
+  
+  local-deploy:
+    internal: true
+    cmds : 
+      - task : local-lambda-deploy
+    desc: "[local] 部屬lambda"
 
   local-down:
     internal: true
