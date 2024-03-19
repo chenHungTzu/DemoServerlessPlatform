@@ -1,3 +1,13 @@
+# 專案
+
+基本的 ServerLess Platform Application 示意，搭配R&D WorkStack 與 Infrastructure Builder (Terraform) 。
+
+<img src="./img/main.png" style="zoom:70%;" />
+
+
+---
+
+
 # 先決條件
 
 ---
