@@ -1,5 +1,5 @@
-using Microsoft.Extensions.DependencyInjection;
 using infrastructure.DI;
+using Microsoft.Extensions.DependencyInjection;
 using misc;
 
 namespace testbase
@@ -8,7 +8,7 @@ namespace testbase
     {
         public readonly IServiceProvider ServiceProvider;
 
-         public IntegrationTestFixture()
+        public IntegrationTestFixture()
         {
             SystemUtil.WaitTCPPortOpen(new[] {
                 ("127.0.0.1" , 4566)
@@ -25,10 +25,6 @@ namespace testbase
         {
             Environment.SetEnvironmentVariable(nameof(EnvironmentVariable.MODE), "local");
             Environment.SetEnvironmentVariable(nameof(EnvironmentVariable.DDB_ENDPOINT), "http://127.0.0.1:4566");
-           
         }
     }
-
-   
-
 }

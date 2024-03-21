@@ -1,9 +1,7 @@
-﻿/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/domain.tests/DividerUnitTest.cs
-/Users/hungtzuchen/.nuget/packages/microsoft.net.test.sdk/17.8.0/build/netcoreapp3.1/Microsoft.NET.Test.Sdk.Program.cs
-/Users/hungtzuchen/.nuget/packages/xunit.runner.visualstudio/2.5.7/build/net6.0/xunit.runner.visualstudio.testadapter.dll
-/Users/hungtzuchen/.nuget/packages/xunit.runner.visualstudio/2.5.7/build/net6.0/xunit.runner.reporters.netcoreapp10.dll
-/Users/hungtzuchen/.nuget/packages/xunit.runner.visualstudio/2.5.7/build/net6.0/xunit.runner.utility.netcoreapp10.dll
-/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/domain.tests/TestResults/12e26f8e-c809-4492-987b-81ad6728b2d3/coverage.opencover.xml
-/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/domain.tests/TestResults/32f2fd89-c0b7-46a9-8119-6089ec01c87f/coverage.opencover.xml
-/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/domain.tests/TestResults/d04feec3-e823-49ab-a500-93ecb149ab19/coverage.opencover.xml
-/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/domain.tests/TestResults/fb2ab45b-214a-4628-bebf-8a725c0a05c0/coverage.opencover.xml
+﻿D:\proj\DemoServerlessPlatform\domain.tests\DividerUnitTest.cs
+C:\Users\motx2\.nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs
+C:\Users\motx2\.nuget\packages\microsoft.testplatform.testhost\17.8.0\build\netcoreapp3.1\x64\testhost.exe
+C:\Users\motx2\.nuget\packages\microsoft.testplatform.testhost\17.8.0\build\netcoreapp3.1\x64\testhost.dll
+C:\Users\motx2\.nuget\packages\xunit.runner.visualstudio\2.5.7\build\net6.0\xunit.runner.visualstudio.testadapter.dll
+C:\Users\motx2\.nuget\packages\xunit.runner.visualstudio\2.5.7\build\net6.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\motx2\.nuget\packages\xunit.runner.visualstudio\2.5.7\build\net6.0\xunit.runner.utility.netcoreapp10.dll

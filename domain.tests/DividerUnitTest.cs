@@ -4,7 +4,6 @@ namespace domain.tests
 {
     public class DividerUnitTest
     {
-
         /// <summary>
         /// 驗證基本除法是否正常
         /// </summary>
@@ -69,12 +68,7 @@ namespace domain.tests
         [Fact]
         public void Table_Name_Not_Exist_Should_be_Throw()
         {
-         
-           var ex = Assert.Throws<ArgumentOutOfRangeException>(() => new Divider(3, 4).TableName);
+            var ex = Assert.Throws<ArgumentOutOfRangeException>(() => new Divider(3, 4).TableName);
         }
-
     }
 }
-
-
-

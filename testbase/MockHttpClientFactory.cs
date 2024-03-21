@@ -1,7 +1,3 @@
-
-
-using System.Text;
-using System.Text.Json;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
@@ -39,17 +35,14 @@ namespace testbase
             _httpClient = httpClient;
         }
 
-
         public async Task<string> PostAsync(string endpoint)
         {
-         
             HttpResponseMessage response = await _httpClient.PostAsync(endpoint, default);
 
             if (response.IsSuccessStatusCode == false)
                 throw new Exception(response.ReasonPhrase);
 
-            return await response.Content.ReadAsStringAsync();;
+            return await response.Content.ReadAsStringAsync(); ;
         }
-
     }
 }

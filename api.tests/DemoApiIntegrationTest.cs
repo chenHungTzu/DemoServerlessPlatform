@@ -7,7 +7,6 @@ namespace api.tests;
 
 public class DemoApiIntegrationTest : IntegrationTestBase, IClassFixture<IntegrationTestFixture>
 {
-
     private MockHttpClient _httpClient { get; }
 
     public DemoApiIntegrationTest(IntegrationTestFixture integrationTestFixture) : base(integrationTestFixture)
@@ -30,7 +29,6 @@ public class DemoApiIntegrationTest : IntegrationTestBase, IClassFixture<Integra
         var resp = await ScanDynamoDBFrom($"{target}-{EnvironmentVariable.MODE()}");
         var actual = resp.First().Values.First().N;
         number.Should().Be(int.Parse(actual));
-
     }
 
     [Fact]
@@ -39,6 +37,5 @@ public class DemoApiIntegrationTest : IntegrationTestBase, IClassFixture<Integra
         var endpoint = $"/api/Demo/DivisionToWrite/{-1}";
 
         var ex = await Assert.ThrowsAsync<Exception>(() => _httpClient.PostAsync(endpoint));
-
     }
 }

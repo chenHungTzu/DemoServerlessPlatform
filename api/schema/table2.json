@@ -1,19 +1,19 @@
 {
-    "AttributeDefinitions": [
-      {
-        "AttributeName": "Number",
-        "AttributeType": "N"
-      }
-    ],
-    "TableName": "table2-local",
-    "KeySchema": [
-      {
-        "AttributeName": "Number",
-        "KeyType": "HASH"
-      }
-    ],
-    "ProvisionedThroughput": {
-      "ReadCapacityUnits": 1,
-      "WriteCapacityUnits": 1
+  "AttributeDefinitions": [
+    {
+      "AttributeName": "Number",
+      "AttributeType": "N"
     }
+  ],
+  "TableName": "table2-local",
+  "KeySchema": [
+    {
+      "AttributeName": "Number",
+      "KeyType": "HASH"
+    }
+  ],
+  "ProvisionedThroughput": {
+    "ReadCapacityUnits": 1,
+    "WriteCapacityUnits": 1
   }
+}

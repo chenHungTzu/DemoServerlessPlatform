@@ -2,7 +2,7 @@ using System.Net.Sockets;
 
 namespace misc
 {
-      public class SystemUtil
+    public class SystemUtil
     {
         public static void WaitTCPPortOpen((string IP, int Port)[] ipAddress)
         {

@@ -1,13 +1,144 @@
-¼
-I/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/misc/SystemUtil.cs
+Ø
+:D:\proj\DemoServerlessPlatform\misc\EnvironmentVariable.cs
 	namespace 	
 misc
  
 { 
-public 
-class 
+public 
+
+class 
+EnvironmentVariable $
+{ 
+public 
+static 
+string 
+MODE !
+(! "
+)" #
+=>$ &"
+GetEnvironmentVariable' =
+(= >
+nameof> D
+(D E
+MODEE I
+)I J
+,J K
+$strL S
+)S T
+;T U
+public		 
+static		 
+string		 
 
-SystemUtil 
+DDB_REGION		 '
+(		' (
+)		( )
+=>		* ,"
+GetEnvironmentVariable		- C
+(		C D
+nameof		D J
+(		J K
+
+DDB_REGION		K U
+)		U V
+,		V W
+RegionEndpoint		X f
+.		f g
+APNortheast1		g s
+.		s t
+ToString		t |
+(		| }
+)		} ~
+)		~ 
+;			 €
+public 
+static 
+string 
+DDB_ENDPOINT )
+() *
+)* +
+=>, ."
+GetEnvironmentVariable/ E
+(E F
+nameofF L
+(L M
+DDB_ENDPOINTM Y
+)Y Z
+,Z [
+$str\ ~
+)~ 
+;	 €
+private 
+static 
+string "
+GetEnvironmentVariable 4
+(4 5
+string5 ;
+name< @
+,@ A
+stringB H
+defaultValueI U
+)U V
+{ 	
+var 
+variable 
+= 
+Environment &
+.& '"
+GetEnvironmentVariable' =
+(= >
+name> B
+)B C
+;C D
+if 
+( 
+string 
+. 
+IsNullOrWhiteSpace )
+() *
+variable* 2
+)2 3
+)3 4
+{ 
+if 
+( 
+defaultValue  
+==! #
+null$ (
+)( )
+throw 
+new !
+ArgumentNullException 3
+(3 4
+$"4 6
+$str6 J
+{J K
+nameK O
+}O P
+$strP _
+"_ `
+)` a
+;a b
+return 
+defaultValue #
+;# $
+} 
+return 
+variable 
+; 
+} 	
+} 
+} ¤
+1D:\proj\DemoServerlessPlatform\misc\SystemUtil.cs
+	namespace 	
+misc
+ 
+{ 
+public 
+
+class 
+
+SystemUtil 
 { 
 public 
 static 
@@ -137,134 +268,4 @@ SystemUtil 
 }## 
 }$$ 	
 }%% 
-}&& ð
-R/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/misc/EnvironmentVariable.cs
-	namespace 	
-misc
- 
-{ 
-public 
-
-class 
-EnvironmentVariable $
-{ 
-public 
-static 
-string 
-MODE !
-(! "
-)" #
-=>$ &"
-GetEnvironmentVariable' =
-(= >
-nameof> D
-(D E
-MODEE I
-)I J
-,J K
-$strL S
-)S T
-;T U
-public 
-static 
-string 
-
-DDB_REGION '
-(' (
-)( )
-=>* ,"
-GetEnvironmentVariable- C
-(C D
-nameofD J
-(J K
-
-DDB_REGIONK U
-)U V
-,V W
-RegionEndpointX f
-.f g
-APNortheast1g s
-.s t
-ToStringt |
-(| }
-)} ~
-)~ 
-;	 €
-public		 
-static		 
-string		 
-DDB_ENDPOINT		 )
-(		) *
-)		* +
-=>		, ."
-GetEnvironmentVariable		/ E
-(		E F
-nameof		F L
-(		L M
-DDB_ENDPOINT		M Y
-)		Y Z
-,		Z [
-$str		\ ~
-)		~ 
-;			 €
-private 
-static 
-string "
-GetEnvironmentVariable 4
-(4 5
-string5 ;
-name< @
-,@ A
-stringB H
-defaultValueI U
-)U V
-{ 	
-var 
-variable 
-= 
-Environment &
-.& '"
-GetEnvironmentVariable' =
-(= >
-name> B
-)B C
-;C D
-if 
-( 
-string 
-. 
-IsNullOrWhiteSpace )
-() *
-variable* 2
-)2 3
-)3 4
-{ 
-if 
-( 
-defaultValue  
-==! #
-null$ (
-)( )
-throw 
-new !
-ArgumentNullException 3
-(3 4
-$"4 6
-$str6 J
-{J K
-nameK O
-}O P
-$strP _
-"_ `
-)` a
-;a b
-return 
-defaultValue #
-;# $
-} 
-return 
-variable 
-; 
-} 	
-} 
-} 
+}&& 

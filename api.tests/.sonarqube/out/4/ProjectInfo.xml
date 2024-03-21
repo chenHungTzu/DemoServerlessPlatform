@@ -3,15 +3,15 @@
   <ProjectName>testbase</ProjectName>
   <ProjectLanguage>C#</ProjectLanguage>
   <ProjectType>Test</ProjectType>
-  <ProjectGuid>b22da833-4012-4347-935a-f69893041795</ProjectGuid>
-  <FullPath>/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/testbase/testbase.csproj</FullPath>
+  <ProjectGuid>f0630a75-3ede-4270-9bbf-9935559ec63a</ProjectGuid>
+  <FullPath>D:\proj\DemoServerlessPlatform\testbase\testbase.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResults>
-    <AnalysisResult Id="FilesToAnalyze" Location="/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api.tests/.sonarqube/conf/4/FilesToAnalyze.txt" />
+    <AnalysisResult Id="FilesToAnalyze" Location="D:\proj\DemoServerlessPlatform\api.tests\.sonarqube\conf\4\FilesToAnalyze.txt" />
   </AnalysisResults>
   <AnalysisSettings>
-    <Property Name="sonar.cs.roslyn.reportFilePaths">/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api.tests/.sonarqube/out/4/Issues.json</Property>
-    <Property Name="sonar.cs.analyzer.projectOutPaths">/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api.tests/.sonarqube/out/4</Property>
+    <Property Name="sonar.cs.roslyn.reportFilePaths">D:\proj\DemoServerlessPlatform\api.tests\.sonarqube\out\4\Issues.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPaths">D:\proj\DemoServerlessPlatform\api.tests\.sonarqube\out\4</Property>
   </AnalysisSettings>
   <Configuration>Debug</Configuration>
   <Platform>AnyCPU</Platform>

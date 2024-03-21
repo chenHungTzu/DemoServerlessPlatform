@@ -1,5 +1,13 @@
-–
-N/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api/LambdaEntryPoint.cs
+°
+@D:\proj\DemoServerlessPlatform\api\Controllers\DemoController.cs
+
+		 
+, = " '
+1 B% 6
+
+) 8
+= CD J    ~
+6D:\proj\DemoServerlessPlatform\api\LambdaEntryPoint.cs
 
 		 
 
@@ -8,8 +16,21 @@ N/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api/LambdaEntryPoint.cs
 
 **  
 
-**. 5·
-E/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api/Startup.cs
+**. 5§
+5D:\proj\DemoServerlessPlatform\api\LocalEntryPoint.cs
+
+ 
+
+ 
+% )
+
+ 
+ 0
+
+ 
+: >" &
+& 0 Ÿ
+-D:\proj\DemoServerlessPlatform\api\Startup.cs
 
  
 " /		 %
@@ -22,25 +43,4 @@ E/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api/Startup.cs
 . 1      "" 
 G J 
 "" "$$ %% 
-%%( /'' ¿
-M/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api/LocalEntryPoint.cs
-
- 
-
- 
-% )
-
- 
- 0
-
- 
-: >" &
-& 0 È
-X/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api/Controllers/DemoController.cs
-
- 
-, = "## '
-1 B% 6
-
-) 8
-= C##D J%%  
+%%( /'' 

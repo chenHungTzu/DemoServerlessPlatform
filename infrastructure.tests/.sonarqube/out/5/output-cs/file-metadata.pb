@@ -1,6 +1,6 @@
-ç
-Å/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/infrastructure.tests/obj/Debug/net6.0/infrastructure.tests.AssemblyInfo.csutf-8ó
-ã/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/infrastructure.tests/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.csutf-8x
-o/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/infrastructure.tests/DividerRepositoryIntegrationTest.csutf-8è
-É/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/infrastructure.tests/obj/Debug/net6.0/infrastructure.tests.GlobalUsings.g.csutf-8Å
-v/Users/hungtzuchen/.nuget/packages/microsoft.net.test.sdk/17.8.0/build/netcoreapp3.1/Microsoft.NET.Test.Sdk.Program.csutf-8
+`
+WD:\proj\DemoServerlessPlatform\infrastructure.tests\DividerRepositoryIntegrationTest.csutf-8}
+rC:\Users\motx2\.nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.csutf-8v
+kD:\proj\DemoServerlessPlatform\infrastructure.tests\obj\Debug\net6.0\infrastructure.tests.GlobalUsings.g.csutf-8~
+sD:\proj\DemoServerlessPlatform\infrastructure.tests\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.csutf-8t
+iD:\proj\DemoServerlessPlatform\infrastructure.tests\obj\Debug\net6.0\infrastructure.tests.AssemblyInfo.csutf-8

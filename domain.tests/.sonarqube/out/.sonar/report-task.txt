@@ -1,6 +1,6 @@
 projectKey=domain
 serverUrl=http://localhost:9000
-serverVersion=10.4.1.88267
+serverVersion=10.3.0.82913
 dashboardUrl=http://localhost:9000/dashboard?id=domain
-ceTaskId=111f235e-23f8-49a2-97f7-e1903570b09c
-ceTaskUrl=http://localhost:9000/api/ce/task?id=111f235e-23f8-49a2-97f7-e1903570b09c
+ceTaskId=AY5fso2XeIR0zy60AsWs
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AY5fso2XeIR0zy60AsWs

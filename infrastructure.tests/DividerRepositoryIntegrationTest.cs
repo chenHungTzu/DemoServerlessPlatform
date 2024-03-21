@@ -7,8 +7,6 @@ using testbase;
 
 namespace infrastructure.tests
 {
-
-
     public class DividerRepositoryIntegrationTest : IntegrationTestBase, IClassFixture<IntegrationTestFixture>
     {
         private readonly IDividerRepository _dividerRepository;
@@ -28,7 +26,6 @@ namespace infrastructure.tests
         [InlineData(3, "table0")]
         public async Task Normal_repository_Should_be_True(int number, string target)
         {
-
             // arrange
             var divider = new Divider(number, 3);
 
@@ -39,8 +36,6 @@ namespace infrastructure.tests
             var resp = await ScanDynamoDBFrom($"{target}-{EnvironmentVariable.MODE()}");
             var actual = resp.First().Values.First().N;
             number.Should().Be(int.Parse(actual));
-
         }
     }
-
 }

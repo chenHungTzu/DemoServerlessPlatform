@@ -3,15 +3,15 @@
   <ProjectName>infrastructure</ProjectName>
   <ProjectLanguage>C#</ProjectLanguage>
   <ProjectType>Product</ProjectType>
-  <ProjectGuid>5d57e8be-90e5-4ed7-8201-0f9264485dd1</ProjectGuid>
-  <FullPath>/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/infrastructure/infrastructure.csproj</FullPath>
+  <ProjectGuid>f8108e4f-8b41-430c-bd69-1b72ab063542</ProjectGuid>
+  <FullPath>D:\proj\DemoServerlessPlatform\infrastructure\infrastructure.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResults>
-    <AnalysisResult Id="FilesToAnalyze" Location="/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/infrastructure.tests/.sonarqube/conf/2/FilesToAnalyze.txt" />
+    <AnalysisResult Id="FilesToAnalyze" Location="D:\proj\DemoServerlessPlatform\infrastructure.tests\.sonarqube\conf\2\FilesToAnalyze.txt" />
   </AnalysisResults>
   <AnalysisSettings>
-    <Property Name="sonar.cs.roslyn.reportFilePaths">/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/infrastructure.tests/.sonarqube/out/2/Issues.json</Property>
-    <Property Name="sonar.cs.analyzer.projectOutPaths">/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/infrastructure.tests/.sonarqube/out/2</Property>
+    <Property Name="sonar.cs.roslyn.reportFilePaths">D:\proj\DemoServerlessPlatform\infrastructure.tests\.sonarqube\out\2\Issues.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPaths">D:\proj\DemoServerlessPlatform\infrastructure.tests\.sonarqube\out\2</Property>
   </AnalysisSettings>
   <Configuration>Debug</Configuration>
   <Platform>AnyCPU</Platform>

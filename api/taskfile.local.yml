@@ -7,16 +7,17 @@ vars:
   AGW_NAME: divider_agw
 
 tasks:
+  
   local-up:
     internal: true
     cmds: 
      - docker-compose up -d
+     - task: local-wait-localstack-windows-amd64
+     - task: local-wait-localstack-darwin
      - task : local-create-table
      - task : local-lambda-deploy
      - task : local-agw-create-windows-amd64
-       platforms: [windows/amd64]
      - task : local-agw-create-darwin
-       platforms: [darwin]
      #- '{{if eq OS "windows"}} task local-agw-create-windows-amd64 {{else}} task local-agw-create-darwin {{end}}'
      
     desc: "[local] 啟動Localstack"
@@ -92,6 +93,7 @@ tasks:
     desc: "[local] 刪除 API Gateway"
 
   local-agw-create-darwin: 
+    platforms: [darwin]
     internal: true
     deps: [local-agw-delete-darwin]
     cmds:
@@ -106,6 +108,7 @@ tasks:
 
 
   local-agw-create-windows-amd64: 
+    platforms: [windows/amd64]
     internal: true
     deps: [local-agw-delete-windows-amd64]
     cmds:  
@@ -117,3 +120,21 @@ tasks:
         AWS_PAGER="" aws apigateway put-integration --rest-api-id ${AGW_ID//$'\r'} --resource-id ${RESOURCE_ID//$'\r'} --endpoint-url=http://{{.LOCALSTACK_ENDPOINT}} --region={{.AWS_REGION}}  --type AWS_PROXY  --http-method ANY --integration-http-method ANY --uri arn:aws:apigateway:ap-northeast-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-northeast-1:000000000000:function:{{.FUNCTION_NAME}}/invocations  --passthrough-behavior WHEN_NO_MATCH
         AWS_PAGER="" aws apigateway create-deployment --rest-api-id ${AGW_ID//$'\r'} --endpoint-url=http://{{.LOCALSTACK_ENDPOINT}} --region={{.AWS_REGION}} --stage-name dev 
     desc: "[local] 建立Agw + Lambda Integration"
+
+
+  local-wait-localstack-windows-amd64:
+    platforms: [windows/amd64]
+    internal: true
+    cmd: cmd.exe /c wait-localsatck-ready.bat
+    desc: "[misc] 等待localstack啟動 (windows)"
+    
+
+  local-wait-localstack-darwin:
+    platforms: [darwin]
+    internal: true
+    cmds:
+      - |
+        while ! curl localhost:4566/health;
+          do sleep 1
+        done
+    desc: "[misc] 等待localstack啟動 (MacOS)"

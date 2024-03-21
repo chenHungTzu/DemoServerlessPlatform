@@ -8,10 +8,8 @@ namespace infrastructure.DI
 {
     public static class DIExtension
     {
-
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
-
             services.AddControllers();
             if (EnvironmentVariable.MODE() == "local")
             {
@@ -44,5 +42,4 @@ namespace infrastructure.DI
             return services;
         }
     }
-
 }

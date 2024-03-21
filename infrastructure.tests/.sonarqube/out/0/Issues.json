@@ -5,9 +5,9 @@
     {
       "tool": {
         "name": "Microsoft (R) Visual C# 編譯器",
-        "version": "4.9.0.0",
-        "fileVersion": "4.9.0-3.24067.18 (4fc721bb)",
-        "semanticVersion": "4.9.0",
+        "version": "4.8.0.0",
+        "fileVersion": "4.8.0-3.23524.11 (f43cd10b)",
+        "semanticVersion": "4.8.0",
         "language": "zh-TW"
       },
       "results": [
@@ -18,7 +18,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/misc/EnvironmentVariable.cs",
+                "uri": "file:///D:/proj/DemoServerlessPlatform/misc/EnvironmentVariable.cs",
                 "region": {
                   "startLine": 5,
                   "startColumn": 18,
@@ -39,33 +39,12 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/misc/SystemUtil.cs",
+                "uri": "file:///D:/proj/DemoServerlessPlatform/misc/SystemUtil.cs",
                 "region": {
                   "startLine": 5,
-                  "startColumn": 20,
+                  "startColumn": 18,
                   "endLine": 5,
-                  "endColumn": 30
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S5332",
-          "level": "warning",
-          "message": "Using http protocol is insecure. Use https instead.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/misc/EnvironmentVariable.cs",
-                "region": {
-                  "startLine": 9,
-                  "startColumn": 93,
-                  "endLine": 9,
-                  "endColumn": 127
+                  "endColumn": 28
                 }
               }
             }
@@ -81,12 +60,33 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/misc/SystemUtil.cs",
+                "uri": "file:///D:/proj/DemoServerlessPlatform/misc/SystemUtil.cs",
                 "region": {
                   "startLine": 13,
                   "startColumn": 39,
                   "endLine": 13,
                   "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S5332",
+          "level": "warning",
+          "message": "Using http protocol is insecure. Use https instead.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/proj/DemoServerlessPlatform/misc/EnvironmentVariable.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 93,
+                  "endLine": 11,
+                  "endColumn": 127
                 }
               }
             }

@@ -38,13 +38,11 @@ namespace testbase
                         }
                     } while (!scan.IsDone);
                 }
-
             }
             catch (Exception ex)
             {
                 throw;
             }
         }
-
     }
 }

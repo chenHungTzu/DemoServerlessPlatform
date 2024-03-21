@@ -1,10 +1,7 @@
-﻿/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api.tests/DemoApiIntegrationTest.cs
-/Users/hungtzuchen/.nuget/packages/microsoft.net.test.sdk/17.8.0/build/netcoreapp3.1/Microsoft.NET.Test.Sdk.Program.cs
-/Users/hungtzuchen/.nuget/packages/xunit.runner.visualstudio/2.5.7/build/net6.0/xunit.runner.visualstudio.testadapter.dll
-/Users/hungtzuchen/.nuget/packages/xunit.runner.visualstudio/2.5.7/build/net6.0/xunit.runner.reporters.netcoreapp10.dll
-/Users/hungtzuchen/.nuget/packages/xunit.runner.visualstudio/2.5.7/build/net6.0/xunit.runner.utility.netcoreapp10.dll
-/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api.tests/TestResults/0049db57-d052-42ca-aed7-c2889862fafe/coverage.opencover.xml
-/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api.tests/TestResults/0e0dc0c0-ffde-45e7-88cb-670494406e18/coverage.opencover.xml
-/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api.tests/TestResults/329739bd-b5af-4ff9-9f6c-99fbb1a1ae91/coverage.opencover.xml
-/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api.tests/TestResults/3adca920-d23f-4f03-8405-9671bc588abb/coverage.opencover.xml
-/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/api.tests/TestResults/5c8b2f34-9742-43f0-9926-c96a2c167ba4/coverage.opencover.xml
+﻿D:\proj\DemoServerlessPlatform\api.tests\DemoApiIntegrationTest.cs
+C:\Users\motx2\.nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs
+C:\Users\motx2\.nuget\packages\microsoft.testplatform.testhost\17.8.0\build\netcoreapp3.1\x64\testhost.exe
+C:\Users\motx2\.nuget\packages\microsoft.testplatform.testhost\17.8.0\build\netcoreapp3.1\x64\testhost.dll
+C:\Users\motx2\.nuget\packages\xunit.runner.visualstudio\2.5.7\build\net6.0\xunit.runner.visualstudio.testadapter.dll
+C:\Users\motx2\.nuget\packages\xunit.runner.visualstudio\2.5.7\build\net6.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\motx2\.nuget\packages\xunit.runner.visualstudio\2.5.7\build\net6.0\xunit.runner.utility.netcoreapp10.dll

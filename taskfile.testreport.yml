@@ -10,17 +10,38 @@ tasks:
       - echo "SONARQUBE_DEFAULT_LOGIN=admin" >> Taskfile.sonar.env
       - echo "SONARQUBE_DEFAULT_PWD=admin" >> Taskfile.sonar.env
       - docker-compose  -f docker-compose.sonarqube.yml up -d
-      - task : sonarqube-wait-start
+      - task : sonarqube-wait-start-darwin
+      - task : sonarqube-wait-start-windows-amd64
       - task : sonarqube-create-all
     desc: "[sonarqube]啟動sonarqube"
 
-  sonarqube-wait-start:
+  sonarqube-wait-start-darwin:
+    platforms: [darwin]
     internal: true
     cmds:
       - |
-        while [ "$(curl -l 'http://localhost:9000/api/system/status'| jq -r .status)" != "UP" ]; do
+        while [ "$(curl -l -s 'http://localhost:9000/api/system/status'| jq -r .status)" != "UP" ]; do
           echo "Waiting for URL Sonarqube to be available..."
-          {{if eq OS "windows"}} timeout /t 5 {{else}} sleep 5 {{end}}       
+          sleep 5
+        done
+    desc: "[sonarqube]等待sonarqube就緒"
+  
+  sonarqube-wait-start-windows-amd64:
+    platforms: [windows/amd64]
+    internal: true
+    cmds:
+      - |    
+        while true; do
+          status=$(curl -l -s http://localhost:9000/api/system/status | jq -r .status)
+          echo $status
+
+          if [ ${status//$'\r'} == "UP" ]; then
+            echo "SonarQube is up."
+            break
+          else
+            echo "Waiting for SonarQube to be available..."
+            timeout /t 5
+          fi
         done
     desc: "[sonarqube]等待sonarqube就緒"
   

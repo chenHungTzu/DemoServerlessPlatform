@@ -11,7 +11,6 @@ namespace testbase
 
         protected IServiceProvider _serviceProvider { get; }
 
-
         public IntegrationTestBase(IntegrationTestFixture integrationTestFixture)
         {
             this.integrationTestFixture = integrationTestFixture;
@@ -25,7 +24,6 @@ namespace testbase
 
         public async Task InitializeAsync()
         {
-
         }
 
         protected async Task<List<Dictionary<string, AttributeValue>>> ScanDynamoDBFrom(string tableName)
@@ -36,7 +34,7 @@ namespace testbase
                 TableName = tableName
             };
             var response = await amazoneDynamoDB.ScanAsync(request);
-            return  response.Items;
+            return response.Items;
         }
     }
 }

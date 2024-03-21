@@ -1,1 +1,1 @@
-/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/domain.tests/.sonarqube/out/1
+D:\proj\DemoServerlessPlatform\domain.tests\.sonarqube\out\1

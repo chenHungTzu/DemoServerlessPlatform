@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using domain;
 using domain.adapter;
 using Microsoft.AspNetCore.Mvc;
@@ -12,7 +8,6 @@ namespace DemoServerlessPlatform.Controllers
     [Route("api/[controller]")]
     public class DemoController : ControllerBase
     {
-
         private readonly IDividerRepository dividerRepository;
 
         public DemoController(IDividerRepository dividerRepository)
@@ -26,7 +21,7 @@ namespace DemoServerlessPlatform.Controllers
         ///  aws : https://<agwId>.execute-api.ap-northeast-1.amazonaws.com/dev/api/Demo/DivisionToWrite/{number}
         /// </summary>
         /// <param name="number"></param>
-        /// <returns></returns> 
+        /// <returns></returns>
         [HttpPost("DivisionToWrite/{number}")]
         public async Task<IActionResult> DivisionToWrite(int number)
         {

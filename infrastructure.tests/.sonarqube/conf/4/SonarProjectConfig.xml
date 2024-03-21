@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SonarProjectConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/analyzer/2021/1">
-  <AnalysisConfigPath>/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/infrastructure.tests/.sonarqube/conf/SonarQubeAnalysisConfig.xml</AnalysisConfigPath>
-  <ProjectPath>/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/testbase/testbase.csproj</ProjectPath>
-  <FilesToAnalyzePath>/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/infrastructure.tests/.sonarqube/conf/4/FilesToAnalyze.txt</FilesToAnalyzePath>
-  <OutPath>/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/infrastructure.tests/.sonarqube/out/4</OutPath>
+  <AnalysisConfigPath>D:\proj\DemoServerlessPlatform\infrastructure.tests\.sonarqube\conf\SonarQubeAnalysisConfig.xml</AnalysisConfigPath>
+  <ProjectPath>D:\proj\DemoServerlessPlatform\testbase\testbase.csproj</ProjectPath>
+  <FilesToAnalyzePath>D:\proj\DemoServerlessPlatform\infrastructure.tests\.sonarqube\conf\4\FilesToAnalyze.txt</FilesToAnalyzePath>
+  <OutPath>D:\proj\DemoServerlessPlatform\infrastructure.tests\.sonarqube\out\4</OutPath>
   <ProjectType>Test</ProjectType>
   <TargetFramework>net6.0</TargetFramework>
 </SonarProjectConfig>

@@ -1,4 +1,4 @@
-﻿/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/testbase/Cleaner.cs
-/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/testbase/IntegrationTestBase.cs
-/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/testbase/IntegrationTestFixture.cs
-/Users/hungtzuchen/Desktop/proj/DemoServerlessPlatform/testbase/MockHttpClientFactory.cs
+﻿D:\proj\DemoServerlessPlatform\testbase\Cleaner.cs
+D:\proj\DemoServerlessPlatform\testbase\IntegrationTestBase.cs
+D:\proj\DemoServerlessPlatform\testbase\IntegrationTestFixture.cs
+D:\proj\DemoServerlessPlatform\testbase\MockHttpClientFactory.cs
